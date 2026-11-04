@@ -32,6 +32,22 @@
           <li class="nav-item">
             <%= link_to "About", home_about_path, class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <button
+              class="nav-link"
+              type="button"
+              data-bs-toggle="menu"
+              aria-expanded="false"
+            >
+              Friends
+            </button>
+            <div class="menu">
+              <%= link_to "View All Friends", friends_path, class: "menu-item" %>
+              <%= link_to "Add New Friend", new_friend_path, class: "menu-item" %>
+              <hr class="menu-divider">
+              <a class="menu-item" href="#">Something else here</a>
+            </div>
+          </li>
         </ul>
         <form class="hstack gap-2" role="search">
           <input
