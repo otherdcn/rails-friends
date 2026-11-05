@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<div id="<%= dom_id @friend %>">
+<div id="<%= dom_id @friend %>" class="container my-5 p-5">
   <div>
     <strong>First name:</strong>
     <%= @friend.first_name %>
@@ -28,10 +28,17 @@
 
 </div>
 
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <%= link_to "Edit this friend",
+  edit_friend_path(@friend),
+  class: "btn-outline theme-info" %>
+  <%= link_to "Back to friends", friends_path, class: "btn-outline theme-info" %>
+</div>
+<br>
+<br>
 <div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend) %>
-  |
-  <%= link_to "Back to friends", friends_path %>
-
-  <%= button_to "Destroy this friend", @friend, method: :delete %>
+  <%= button_to "Destroy this friend",
+  @friend,
+  method: :delete,
+  class: "btn-outline theme-danger" %>
 </div>
