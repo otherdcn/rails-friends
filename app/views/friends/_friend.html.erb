@@ -5,14 +5,14 @@
   <td><%= friend.email %></td>
   <td><%= friend.phone %></td>
   <td><%= friend.twitter %></td>
-  <td><%= link_to "Show", friend %></td>
-  <td><%= link_to "Edit", edit_friend_path(friend) %></td>
+  <td><%= link_to "Show", friend, class: "btn-text theme-info" %></td>
+  <td><%= link_to "Edit", edit_friend_path(friend), class: "btn-text theme-info" %></td>
   <td><%= button_to "Delete",
     friend,
     method: :delete,
     data: {
       turbo_confirm: "Are you sure?",
     },
-    class: "theme-danger underline-offset-2 underline-20 hover:underline-100" %>
+    class: "btn-text theme-danger" %>
   </td>
 </tr>
