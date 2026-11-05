@@ -38,5 +38,8 @@
   <%= button_to "Destroy this friend",
   @friend,
   method: :delete,
+  data: {
+    turbo_confirm: "Are you sure?",
+  },
   class: "btn-outline theme-danger" %>
 </div>
